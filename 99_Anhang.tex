@@ -1,0 +1,128 @@
+% select subfiles base file
+\documentclass[00_Praxissemesterbericht.tex]{subfiles}
+\begin{document}
+
+%\phantomsection
+\chapter*{Anhang}
+\label{chap:APPENDIX}
+\addcontentsline{toc}{chapter}{Anhang}
+%\setcounter{chapter}{0}
+\addtocounter{chapter}{1}
+\setcounter{section}{0}
+
+\section{Abbildungen}
+\label{chap:APPENDIX_FIGURES}
+
+\begin{figure}[!htbp]
+\caption{JGiven HTML Report}
+\label{fig:JGIVEN_HTML}
+\includegraphics[width=\textwidth]{media/pictures/JGiven_HTML_Report.png}
+\begin{center}
+Quelle \cite{JGiven}
+\end{center}
+\end{figure}
+
+\begin{figure}[!htbp]
+\caption{JGiven Konsolen Report}
+\label{fig:JGIVEN_TEXT_REPORT}
+\begin{verbatim}
+Scenario: a pancake can be fried out of an egg milk and flour
+
+  Given an egg
+    And some milk
+    And the ingredient flour
+   When the cook mangles everything to a dough
+    And the cook fries the dough in a pan
+   Then the resulting meal is a pan cake
+\end{verbatim}
+\end{figure}
+
+\begin{figure}[!htbp]
+\caption{Git Workflow}
+\label{fig:GIT_WORKFLOW}
+\includegraphics[width=\textwidth]{media/pictures/Git_Workflow.png}
+Erläuterung:
+\begin{itemize}
+\item[A]{Beginn eines Features: Ein neuer Branch wird aus dem "{}stable"{} Branch erstellt}
+\item[B]{Vorbereitung des Reviews: Letzte Änderungen des "{}stable"{} Branches in den aktuellen Feature Branch mergen}
+\item[C]{Review: Code überprüfen, zusätzliche Tests ausführen}
+\item[D]{Tests schlagen fehl: Entwickler muss den Fehler beheben, andere Entwickler werden nicht beeinträchtigt}
+\item[E]{Review abgenommen: Änderungen in "{}stable"{} Branch mergen (mit Jenkins Job)}
+\item[F]{Release: Release wird mit Gradle gebaut}
+\end{itemize}
+\end{figure}
+
+\begin{figure}[!htbp]
+\caption{Git Workflow Alternative}
+\label{fig:GIT_WORKFLOW_ALTERNATIVE}
+\includegraphics[width=\textwidth]{media/pictures/Git_Workflow_new.png}
+\end{figure}
+\clearpage
+
+\section{Code Beispiele}
+\label{sec:CODE}
+
+\begin{lstlisting}[language=xml, frame=single, caption=Spring Konfiguration XML (Quelle{\cite{Spring_CONFIG}}), captionpos=t, breaklines=true, numbers=left, showstringspaces=false, tabsize=2, label=lst:SPRING_CONFIG_XML]
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+   <context:annotation-config/>
+
+   <!-- Definition for spellChecker bean -->
+   <bean id="spellChecker" class="com.tutorialspoint.SpellChecker">
+   </bean>
+
+</beans>
+\end{lstlisting}
+
+\begin{lstlisting}[language=java, frame=single, caption=Spring Konfiguration Annotation (Quelle{\cite{Spring_CONFIG}}), captionpos=t, breaklines=true, numbers=left, showstringspaces=false, tabsize=2, label=lst:SPRING_CONFIG_ANNOTATION]
+public class TextEditor {
+   @Autowired
+   private SpellChecker spellChecker;
+}
+\end{lstlisting}
+\clearpage
+\begin{lstlisting}[language=java, frame=single, caption = Spring Webservice Beispiel (Quelle{\cite[vgl.]{Spring_REST}}), captionpos=t, breaklines=true, showstringspaces=false, numbers = left, tabsize = 2, label=lst:SPRING_WS_JAVA]
+@RequestMapping("/greeting")
+public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name){
+	return "Hello " + name;
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=java, frame=single, caption = JGiven Java Beispiel (Quelle{\cite{JGiven}}), captionpos=t, breaklines=true, showstringspaces=false, numbers = left, tabsize = 2, label=lst:JGIVEN_JAVA]
+@Test
+public void a_pancake_can_be_fried_out_of_an_egg_milk_and_flour() {
+    given().an_egg().
+        and().some_milk().
+        and().the_ingredient( "flour" );
+
+    when().the_cook_mangles_everthing_to_a_dough().
+        and().the_cook_fries_the_dough_in_a_pan();
+
+    then().the_resulting_meal_is_a_pan_cake();
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=java, frame=single, caption = JGiven Steps Beispiel (Quelle{\cite{JGiven_Github}}), captionpos=t, breaklines=true, showstringspaces=false, numbers = left, tabsize = 2, label=lst:JGIVEN_JAVA_STEPS]
+public GivenIngredients an_egg() {
+	return the_ingredient( "egg" );
+}
+public GivenIngredients the_ingredient( String ingredient ) {
+	ingredients.add( ingredient );
+	return this;
+}
+public GivenIngredients some_milk() {
+	return the_ingredient( "milk" );
+}
+\end{lstlisting}
+
+\clearpage
+
+\end{document}
