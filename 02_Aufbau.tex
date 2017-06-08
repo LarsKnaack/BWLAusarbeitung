@@ -23,6 +23,27 @@ Die zweite Säule des Toyota Produktionssystems ist neben dem Jikoda Prinzip die
 \subsection{Kanban}
 Eine Umsetzung des Pull-Prinzips ist der Einsatz von Kanban. Kanban ist eine Methode zur dezentralen Bedarfs- und Produktionssteuerung bei dem der Verbraucher das für die Produktion notwendige Material wie im Supermarkt beim Lieferanten entnimmt. Das ursprüngliche Kanban-System wurde 1947 in der Toyota Motor Corporation entwickelt. Die Materialien werden in sog. Losgrößen oder Kanban-Mengen bemessen, hat ein Verbraucher eine Losgröße verbraucht, signalisiert er dem Lieferanten durch eine Kanban\footnote{jap. Karte}-Karte, dass eine neue Menge produziert werden soll. Die Größe der Kanban-Menge ist immer gleich, kann jedoch von Betrieb zu Betrieb variieren. Im Idealfall beträgt die Kanban-Menge genau 1, womit ein sog. One-Piece-Flow erreicht wird, was die Kosten durch Lagerung minimiert und eine maximale Wertschöfung ermöglicht.
 
+\subsection{Beispiel}
+Beim folgenden Beispiel wird das JIT-Prinzip mittels Kanban erläutert, da Kanban die bekannteste Umsetzung eines PULL-Prinzips ist.
+In einem Automobilzulieferer werden Mittelkonsolen hergestellt. Für die Endmontage wird die Chromverkleidung mit der spritzgegossenen Konsole verklebt. Alle Produkte und Materialien werden in Kanbanbehältern mit Kanbankarten der Losgröße 5 aufbewahrt und transportiert von denen in jeder Abteilung jeweils 2 Behälter stehen. Der Klebstoff wird allerdings vom Einkauf direkt bestellt und fällt damit nicht unter den Kanbanablauf und wird deshalb in folgendem Beispiel ignoriert.
+
+\paragraph{Schritt 1}
+Die Endmontage erhält nun den Kundenauftrag 7 Mittelkonsolen herzustellen und entnimmt den Vorproduktionen jeweils einen Kanbanbehälter. Und stellt nach dem Verbrauch der Teile die leeren Behälter wieder in die Vorproduktionen zurück.
+
+\paragraph{Schritt 2}
+Durch die zurückgestellten Behälter und die daran angebrachten Kanbankarten wird den Vorproduktionen signalisiert, diese Behälter wieder zu füllen. Für die Produktion der Teile wird eventuell auch ein Vorprodukt benötigt was mit dem selben Prinzip hergestellt wird wie in Schritt 1 beschrieben.
+
+\paragraph{Schritt 3}
+Die Endmontage nimmt sich jeweils einen weiteren Behälter aus den Vorproduktionen. Da diese Behälter aber nicht vollständig geleert werden, bleiben sie in der Montage stehen.\\
+Währenddessen haben die Vorproduktionen ihre Behälter wieder gefüllt und bereitgestellt.
+
+\paragraph{Schritt 4}
+Die Endmontage erhält nun den Kundenauftrag 6 weitere Teile herzustellen und fängt mit der Produktion an. Nach 3 gefertigten Teilen werden die leeren Behälter wieder in die Vorproduktionen zurückgestellt und neue Behälter entnommen.
+
+\paragraph{Weitere Schritte}
+Mit dem nächsten Kundenauftrag, sofern dieser eine Losgröße > 2 hat wird der Vorrat der Behälter in der Endmontage aufgebraucht sein und der Ablauf beginnt wieder von vorne.\\
+Idealerweise wird der benötigte Klebstoff auch mit zwei Behältern der Endmontage zur Verfügung gestellt. Durch den Einsatz eines Umlagerungskanbans könnte der jeweilige leere Behälter vom innerbetrieblichen Transport in einem zentralen Lager wieder aufgefüllt werden.
+
 \subsection{Vorteile}
 Bei der traditionellen Produktionssteuerung wird der komplette Martialbedarf zentral an einer einzigen Stelle vorausgeplant. Dabei gibt es kaum Möglichkeiten, produktionsbedinge Schwankungen des Materialdurchflusses zu kompensieren, was eine ausreichende Lagerung der Produktionsteile nötig macht und damit hohe Kosten verursacht. Dies macht Systeme mit geringer IT-Unterstützung unflexibel und träge und damit weniger konkurrenzfähig.\\
 Im Gegensatz dazu bietet Kanban eine schnelle Anpassung an kurzfristige Änderungen des Materialbedarfs, da die Informationsweiterleitung aktuell und direkt vom Verbraucher zum Lieferanten geleitet wird. Außerdem bietet Kanban die Möglichkeit die teilweise sehr komplexen Produktionsabläufe autonom zu verwalten, was den Steuerungsaufwand deutlich reduziert und die Prozesszusammenhänge transparent macht.
