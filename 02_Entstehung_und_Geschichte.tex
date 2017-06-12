@@ -8,7 +8,7 @@
 Als Urvater des TPS gilt Sakichi Toyoda. Dieser gründete im Jahr 1918 die Toyoda Spinning and Weaving Company. Er entwickelte den ersten Dampfbetriebenen Webstuhl, welcher in der Lage war selbstständig auf einen Fadenriss zu reagieren und sich anzuhalten
 \footnote{Vgl. S6,  http://www.pdf.toyota-forklifts-info.de/Broschuere\_TPS.pdf (09.06.2017)}
 %\cite[6]{Toyota_Material_Handling}
-. So konnte man Produktionsfehlern vorbeugen. Dies legte den Grundstein für die erste Säule des TPS, das Jidoka Prinzip.
+. So konnte man Produktionsfehlern vorbe%ugen. Dies legte den Grundstein für die erste Säule des TPS, das Jidoka Prinzip.
 \subsection{Das Jidoka Prinzip}
 Das Jidoka-Prinzip setzt den Fokus auf Qualität in der  und kann als “Automation mit einer menschlichen Note” beschrieben werden. So gibt es in der gesamten Fertigungslinie Qualitätskontrollen. 
 \footnote{Vgl. S10,  http://www.pdf.toyota-forklifts-info.de/Broschuere\_TPS.pdf (09.06.2017)}
@@ -50,7 +50,7 @@ Heijunka heißt übersetzt "Produktionsglättung". Hier versucht man durch genau
 \\
 \\
 In der Realität nutzt man so genannte Heijunka-Tafeln. Dort wird aufgelistet wann, wie viel Hergestellt werden muss. Kommt es zu großen Abweichungen in der Nachfrage gerät das System ins schleudern. Was gerade am Anfang häufig der Fall ist, da man noch nicht so viele Daten für die Schätzungen hat. 
-Ist dies der Fall sollte man den Grund für die Abweichung suchen und möglichst schnell wieder zum Plan zurückkehren. Treten immer weniger Abweichungen auf, so ist man auf dem richtigen weg.
+Ist dies der Fall sollte man den Grund für die Abweichung suchen und möglichst schnell wieder zum Plan zurückkehren. Treten immer weniger Abweichungen auf, so ist man auf dem richtigen weg.\newpage
 
 \subsection{Das Toyota 3M Modell}
 Eine wichtige Rolle bei Just-in-Time spielen auch die so genannten 3M oder Mu´s.
@@ -74,6 +74,33 @@ Um zu überprüfen ob einzelne Arbeitsschritte mit dem Kundentakt synchron sind 
 \footnote{Vgl. S9,  http://www.lean-production-expert.de/lean-production/taktzeitdiagramm.html (09.06.2017)}
 %\cite{lean_production_expert_taktzeit}
 
+\subsubsection{Beispiel}
+Gegeben sei eine vom Kunden vorgegebene Taktzeit von 4,65 Industrieminuten und folgende betriebsinterne Fertigungszeiten:
+\begin{center}
+\begin{tabular}{|>{\bfseries}c|c|c|c|c|c|}
+\hline
+Arbeitsschritt & Sägen & Drehen & Bohren & Montage & Prüfung \\
+\hline
+Taktzeit in Minuten & 1,4 & 4,8 & 3,0 & 2,4 & 1,0 \\
+\hline
+\end{tabular}
+\end{center}
+\paragraph{Engpass beseitigen}
+Da die Zykluszeit des Arbeitsschritts "Drehen" über der vom Kunden vorgegebenen Zeit liegt, muss diese reduziert werden um den Bottleneck der Produktionskette zu eliminieren. Eine Methode dafür ist Kaizen, welche in Abschnitt \ref{sec:KAIZEN} genauer erläutert wird. Mögliche Maßnahmen wären zum Beispiel die Parallelisierung der Arbeit, indem Teilarbeitsschritte auf andere Stationen ausgelagert werden, sodass mehrere Teile gleichzeitig verarbeitet werden können. Desweiteren kann die Verschwendung durch Transport minimiert werden indem unnötig lange Transportwege innerhalb einer Abteilung durch ein sog. Spaghetti-Diagramm visualisiert werden. Bei einem Spaghetti-Diagramm werden alle Wege, welche ein Arbeiter zurücklegt durch Linien auf einer (Hand-)Skizze der Abteilung dargestellt. Bei gut organisierten Anordnungen der Werksstationen sind diese Linien geordnet, bei schlecht Organisierten erinnern diese Linien eher an einen Teller Spaghetti.\footnote{Vgl. http://www.lean-production-expert.de/lean-production/spaghetti-diagramm.html (09.06.2017)}. Zuletzt kann die Bearbeitungszeit kann durch den Einsatz besserer Werkzeuge reduziert werden.
+\paragraph{Bearbeitungsschritte zusammenfassen}
+Bei optimaler Anordnung der Maschinen und Stationen ist es möglich mehrere Arbeitsschritte durch einen einzelnen Mitarbeiter erledigen zu lassen, solange die Kundentaktzeit nicht überschritten wird. Dadurch wird die Verschwendung durch den Transport der Produktionsteile in andere Abteilungen reduziert und die Durchlaufzeit des Produktes wird reduziert. Die neuen Taktzeiten könnten beispielsweise so aussehen:
+
+\begin{center}
+\begin{tabular}{|>{\bfseries}c|c|c|c|}
+\hline
+Arbeitsschritt & Drehen & Sägen + Bohren & Montage + Prüfung \\
+\hline
+Taktzeit in Minuten & 4,5 & 3,0 + 1,4 = 4,4 & 2,4 + 1,0 = 3,4 \\
+\hline
+\end{tabular}
+\end{center}
+Wie erkennbar ist, werden statt fünf nur noch drei seperate Arbeitsschritte durchgeführt, wodurch die Verschwendung durch Transport um 40\% reduziert wurde. 
+\footnote{Vgl. S9,  http://www.lean-production-expert.de/lean-production/taktzeitdiagramm.html (09.06.2017)}
 
 \section{Nachkriegszeit}
 Taiichi Ohno, ein junger Toyota Ingenieur der die Produktivität erhöhen sollte reiste 1953 erneut in die USA um die Methoden bei Ford zu studieren. Am meisten beeindruckten ihn die Amerikanischen Supermärkte. Er realisierte, dass es im Grunde Warenlager sind, deren Wareneingänge ziemlich den Waren Ausgängen entsprechen. Das liegt daran, da ein Supermarkt keinen Platz für Langzeitlagerungen hat. Mit dieser Erkenntnis entwickelte Ohno nun das KANBAN-Prinzip.
@@ -82,15 +109,15 @@ Taiichi Ohno, ein junger Toyota Ingenieur der die Produktivität erhöhen sollte
  In der Nachkriegszeit war das Just-in-Time Prinzip wichtiger denn je, da durch den Krieg viele Ressourcen knapp waren und man die vorhandenen jetzt effizient nutzen musste.
 \subsection{KANBAN Konzept}
 Angelehnt an den Supermarkt wird jeder Abschnitt eines Prozesses wie ein Lager gesehen. Die nächste Station ist der Kunde und die Aktuelle Station ist der Supermarkt. Das Teil welches an den nächsten Arbeitsschritt weitergereicht wird ist die Ware. Die aktuelle Station muss nun dafür sorgen, dass die entnommene Menge wieder aufgefüllt wird, was dem befüllen der Regale im Supermarkt entspricht.
-In der Fertigung z.B findet man das KANBAN Konzept als Zettel, welcher Entnahme- ,Transport- sowie Produktionsinformationen enthält.
+In der Fertigung z.B findet man das Kanban Konzept als Zettel, welcher Entnahme- ,Transport- sowie Produktionsinformationen enthält.
 Zusätzlich unterscheidet man noch nach Entnahme- und Produktions-Kanban.
-Wird der KANBAN richtig umgesetzt, wird keine weitere Produktionsplanung benötigt. Es werden keine nicht benötigten Teile gefertigt sondern nur die, die entnommen werden. 
+Wird der Kanban richtig umgesetzt, wird keine weitere Produktionsplanung benötigt. Es werden keine nicht benötigten Teile gefertigt sondern nur die, die entnommen werden. 
 \footnote{Vgl. S7,  http://www.pdf.toyota-forklifts-info.de/Broschuere\_TPS.pdf (09.06.2017)}
 %\cite[7]{Toyota_Material_Handling}
 
 \subsection{Beispiel}
-Beim folgenden Beispiel wird das JIT-Prinzip mittels Kanban erläutert, da Kanban die bekannteste Umsetzung eines PULL-Prinzips ist.
-In einem Automobilzulieferer werden Mittelkonsolen hergestellt. Für die Endmontage wird die Chromverkleidung mit der spritz gegossenen Konsole verklebt. Alle Produkte und Materialien werden in Kanbanbehältern mit Kanbankarten der Losgröße 5 aufbewahrt und transportiert von denen in jeder Abteilung jeweils 2 Behälter stehen. Der Klebstoff wird allerdings vom Einkauf direkt bestellt und fällt damit nicht unter den Kanbanablauf und wird deshalb in folgendem Beispiel ignoriert.
+Beim folgenden Beispiel wird das JIT-Prinzip mittels Kanban erläutert, da Kanban die bekannteste Umsetzung eines Pull-Prinzips ist.
+In einem Automobilzulieferer werden Mittelkonsolen hergestellt. Für die Endmontage wird die Chromverkleidung mit der spritzgegossenen Konsole verklebt. Alle Produkte und Materialien werden in Kanbanbehältern mit Kanbankarten der Losgröße 5 aufbewahrt und transportiert von denen in jeder Abteilung jeweils 2 Behälter stehen. Der Klebstoff wird allerdings vom Einkauf direkt bestellt und fällt damit nicht unter den Kanbanablauf und wird deshalb in folgendem Beispiel ignoriert.
 
 \paragraph{Schritt 1}
 Die Endmontage erhält nun den Kundenauftrag 7 Mittelkonsolen herzustellen und entnimmt den Vorproduktionen jeweils einen Kanbanbehälter. Und stellt nach dem Verbrauch der Teile die leeren Behälter wieder in die Vorproduktionen zurück.
@@ -107,7 +134,7 @@ Die Endmontage erhält nun den Kundenauftrag 6 weitere Teile herzustellen und f�
 
 \paragraph{Weitere Schritte}
 Mit dem nächsten Kundenauftrag, sofern dieser eine Losgröße > 2 hat wird der Vorrat der Behälter in der Endmontage aufgebraucht sein und der Ablauf beginnt wieder von vorne.\\
-Idealerweise wird der benötigte Klebstoff auch mit zwei Behältern der Endmontage zur Verfügung gestellt. Durch den Einsatz eines Umlagerungskanbans könnte der jeweilige leere Behälter vom innerbetrieblichen Transport in einem zentralen Lager wieder aufgefüllt werden.
+Idealerweise wird der benötigte Klebstoff auch mit zwei Behältern der Endmontage zur Verfügung gestellt. Durch den Einsatz eines Umlagerungskanbans könnte der jeweilige leere Behälter vom innerbetrieblichen Transport in einem zentralen Lager wieder aufgefüllt werden.\footnote{Vgl. http://www.lean-production-expert.de/lean-production/kanban-beschreibung.html (09.07.2017)}
 
 \subsubsection{Vorteile}
 Bei der traditionellen Produktionssteuerung wird der komplette Materialbedarf zentral an einer einzigen Stelle vorausgeplant. Dabei gibt es kaum Möglichkeiten, produktionsbedingte Schwankungen des Materialdurchflusses zu kompensieren, was eine ausreichende Lagerung der Produktionsteile nötig macht und damit hohe Kosten verursacht. Dies macht Systeme mit geringer IT-Unterstützung unflexibel und träge und damit weniger konkurrenzfähig.\\
@@ -117,6 +144,7 @@ Da sich die JIT-Produktion stark von herkommlichen Produktionssystemen untersche
 \section{Erweiterungen}
 
 \subsection{Kaizen}
+\label{sec:KAIZEN}
 Kaizen stellt die grundlegende Philosophie des Unternehmens dar, ständig nach Verbesserung zu streben. Für Kaizen muss allerdings Klarheit darüber herrschen, was erreicht werden soll. 
 
 
